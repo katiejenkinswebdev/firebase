@@ -1,0 +1,29 @@
+[debug] [2019-09-03T18:58:44.268Z] ----------------------------------------------------------------------
+[debug] [2019-09-03T18:58:44.270Z] Command:       /usr/local/bin/node /Users/katiejenkins/.npm-global/bin/firebase serve
+[debug] [2019-09-03T18:58:44.270Z] CLI Version:   7.3.0
+[debug] [2019-09-03T18:58:44.270Z] Platform:      darwin
+[debug] [2019-09-03T18:58:44.270Z] Node Version:  v10.14.1
+[debug] [2019-09-03T18:58:44.275Z] Time:          Tue Sep 03 2019 12:58:44 GMT-0600 (Mountain Daylight Time)
+[debug] [2019-09-03T18:58:44.275Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-03T18:58:44.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-03T18:58:44.285Z] > authorizing via signed-in user
+[debug] [2019-09-03T18:58:44.285Z] [iam] checking project auth-c0172 for permissions ["firebase.projects.get"]
+[debug] [2019-09-03T18:58:44.287Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-09-03T18:58:44.287Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-09-03T18:58:44.598Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-03T18:58:44.620Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/auth-c0172:testIamPermissions  
+
+[debug] [2019-09-03T18:58:45.083Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-03T18:58:45.084Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/auth-c0172  
+ 
+[debug] [2019-09-03T18:58:45.491Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/katiejenkins/workspace/figure/apps/sandboxes/firebase_auth_sandbox'...
+[info] 
+[debug] [2019-09-03T18:58:45.494Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/auth-c0172/webApps/-/config  
+ 
+[debug] [2019-09-03T18:58:46.003Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
