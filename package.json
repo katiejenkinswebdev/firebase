@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/katiejenkinswebdev/firebase/issues"
   },
-  "homepage": "https://github.com/katiejenkinswebdev/firebase#readme"
+  "homepage": "https://github.com/katiejenkinswebdev/firebase#readme",
+  "dependencies": {
+    "firebaseui": "^4.1.0"
+  }
 }

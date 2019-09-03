@@ -14,21 +14,27 @@
     <!-- initialize the SDK after all desired features are loaded -->
     <script defer src="/__/firebase/init.js"></script>
 
+    <!-- Firebase UI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.1.0/firebaseui.css" />
+
   </head>
   <body>
+
     <h1>Firebase Log Ins</h1>
+    <p onClick="signOut()">Sign Out</p>
     <h3>Email Password Sign Up</h3>
     <input id="emailSignup" type="text" name="email" placeholder="Enter Email">
     <input id="passwordSignup" type="text" name="password" placeholder="Enter Password">
-    <button type="button" name="button" onclick="emailPasswordSignup()">Log In</button>
+    <button type="button" name="button" onclick="emailPasswordSignup()">Sign Up</button>
 
     <h3>Email Password Login</h3>
     <input id="emailLogin" type="text" name="email" placeholder="Enter Email">
     <input id="passwordLogin" type="text" name="password" placeholder="Enter Password">
     <button type="button" name="button" onclick="emailPasswordLogin()">Log In</button>
 
-    <h3>Google OAuth</h3>
-    <button name="button" onclick="googleLogin()">Google OAuth</button>
+    <div id="firebaseui-auth-container"></div>
+    <p onClick="sendResetPasswordEmail()">Reset My Password</p>
 
     <script type="text/javascript" src="./js/auth.js"></script>
   </body>
