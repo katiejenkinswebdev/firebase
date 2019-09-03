@@ -1,17 +1,3 @@
-console.log('loaded');
-//
-// document.addEventListener('DOMContentLoaded', function() {
-//
-//   try {
-//     let app = firebase.app();
-//     let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-//     document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-//   } catch (e) {
-//     console.error(e);
-//     document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-//   }
-// });
-
 // Initialize Firebase once DOM is loaded
 document.addEventListener("DOMContentLoaded", event => {
   try {
@@ -38,21 +24,37 @@ const googleLogin = () => {
     })
 };
 
-const emailPasswordLogin = () => {
+const emailPasswordSignup = () => {
 
-  const email = document.getElementById('email').value,
-    password = document.getElementById('password').value;
-    console.log(email, password);
+  const emailSignup = document.getElementById('emailSignup').value,
+    passwordSignup = document.getElementById('passwordSignup').value;
 
-  firebase.auth().createUserWithEmailAndPassword(email, password)
+  firebase.auth().createUserWithEmailAndPassword(emailSignup, passwordSignup)
     .then(result => {
       console.log('result', result);
     })
     .catch(function(error) {
       // Handle Errors here.
-      var errorCode = error.code;
+      let errorCode = error.code;
       console.log('error code', errorCode);
-      var errorMessage = error.message;
+      let errorMessage = error.message;
       console.log('error message', errorMessage);
   });
 };
+
+const emailPasswordLogin = () => {
+
+  const emailLogin = document.getElementById('emailLogin').value,
+    passwordLogin = document.getElementById('passwordLogin').value;
+    console.log(emailLogin, passwordLogin);
+
+  firebase.auth().signInWithEmailAndPassword(emailLogin, passwordLogin)
+    .then(result => {
+      const user = result.user;
+      document.write(`Hello ${user}`);
+    })
+    .catch(function(error) {
+      let errorCode = error.code;
+      let errorMessage = error.message;
+    });
+}
